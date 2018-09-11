@@ -4,10 +4,6 @@ var sass = require( 'gulp-sass' );
 var uglify = require( 'gulp-uglify' );
 var autoprefixer = require ( 'gulp-autoprefixer' );
 var sourcemaps = require ( 'gulp-sourcemaps' );
-var browserify = require( 'browserify' );
-var babelify = require( 'babelify' );
-var source = require( 'vinyl-source-stream' );
-var buffer = require( 'vinyl-buffer' );
 var browserSync = require( 'browser-sync' ).create();
 var reload = browserSync.reload;
 
