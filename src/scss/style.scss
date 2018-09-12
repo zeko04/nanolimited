@@ -1,8 +1,29 @@
-@import 'base/variables';
-body {
-    background: $black;
-}
+// ----------------------------------------------------------------------
+  // Base
+// ----------------------------------------------------------------------
+@import "./base/reset";
+@import "./base/colors";
+@import "./base/typography";
+@import "./base/main";
 
-a {
-    transition: all 320ms ease;
-}
+// ----------------------------------------------------------------------
+  // Layout
+// ----------------------------------------------------------------------
+@import "./layout/grids";
+@import "./layout/header";
+@import "./layout/titlebar";
+@import "./layout/main";
+@import "./layout/footer";
+
+// ----------------------------------------------------------------------
+  // Components
+// ----------------------------------------------------------------------
+@import "./components/buttons";
+@import "./components/form";
+
+// ----------------------------------------------------------------------
+  // Pages
+// ----------------------------------------------------------------------
+@import "./pages/home";
+@import "./pages/about";
+@import "./pages/contacts";

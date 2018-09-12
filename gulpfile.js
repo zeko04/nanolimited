@@ -7,7 +7,15 @@ var sourcemaps = require ( 'gulp-sourcemaps' );
 var browserSync = require( 'browser-sync' ).create();
 var reload = browserSync.reload;
 
-var htmlWatch = '**.*.html';
+var htmlWatch = '**/*.html';
+
+var imageSrc = './src/images/**/*';
+var imageDist = './dist/images/';
+var imageWatch = './src/images/**/*.*'
+
+var fontsSrc = './src/fonts/**/*';
+var fontsDist = './dist/fonts/';
+var fontsWatch = './src/fonts/**/*.*'
 
 var styleSrc = './src/scss/style.scss';
 var styleDist = './dist/css/';
@@ -55,10 +63,16 @@ gulp.task('styles', function(){
 	.pipe( browserSync.stream() );
 })
 
+gulp.task('images', function(){
+	gulp.src( imageSrc )
+	.pipe( gulp.dest( imageDist) )
+})
+
 gulp.task( 'default', [ 'styles', 'js' ] );
 
 gulp.task( 'watch', [ 'default', 'browser-sync' ], function(){
 	gulp.watch( styleWatch, ['styles'] );
 	gulp.watch( jsWatch, ['js']);
+	gulp.watch( imageWatch, ['images']);
 	gulp.watch( htmlWatch, reload );
 } )

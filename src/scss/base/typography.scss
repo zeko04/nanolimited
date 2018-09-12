@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+$main-font: 'Roboto', sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: $main-font;
+  font-weight: normal;
+}
+p {
+	font-size: 20px;
+	font-weight: 300;
+}
+h3 {
+	font-size: 30px;
+	color: $dark-blue;
+	font-weight: 700;
+	text-align: center;
+	@media screen and (min-width: 960px) {
+		font-size: 45px;
+	}
+	@media screen and (min-width: 1200px) {
+		font-size: 60px;
+	}
+}
+
+h4 {
+	font-size: 30px;
+}
